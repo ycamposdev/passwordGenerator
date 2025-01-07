@@ -1,8 +1,9 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
 import reflex as rx
-from myapp.views.form import passwordForm
 from rxconfig import config
+from myapp.views.form import passwordForm
+from myapp.components.getPasswords import MainClass
 
 
 class State(rx.State):
@@ -15,8 +16,15 @@ def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.container(
         rx.center(
-            passwordForm()
+            rx.vstack(
+                passwordForm(),  
+            )
         ),
+        rx.center(
+            rx.text(
+                MainClass.pwd,
+                size="3"),
+            ),
         size="1"
     )
 

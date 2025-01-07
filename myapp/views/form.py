@@ -32,6 +32,22 @@ def passwordForm() -> rx.Component:
             )
         ),
         rx.box(
+            rx.hstack(
+                rx.text("Letras: "),
+                rx.checkbox(
+                    on_change=MainClass.set_lettersChecked,
+                    default_checked=True)
+            )
+        ),
+        rx.box(
+            rx.hstack(
+                rx.text("Mayúsculas: "),
+                rx.checkbox(
+                    on_change=MainClass.set_UppercaseLetterChecked,
+                    default_checked=True)
+            )
+        ),
+        rx.box(
             rx.button(
                 "GENERAR",
                 on_click=MainClass.passwordWithCheckbox,
@@ -43,7 +59,12 @@ def passwordForm() -> rx.Component:
         spacing="5",
         direction="column", 
     ),
-    rx.heading(
+
+    )
+
+""" 
+    rx.center(
+        rx.heading(
             MainClass.pwd,
             size="7"),
-    ) 
+    )"""
