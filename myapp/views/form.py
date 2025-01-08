@@ -3,6 +3,7 @@ from myapp.components.getPasswords import MainClass
 
 def passwordForm() -> rx.Component:
     return rx.vstack(
+        rx.card(
         rx.vstack(
         rx.box(
             rx.input(
@@ -55,11 +56,11 @@ def passwordForm() -> rx.Component:
             ),
             width="100%"
         ),
-        rx.divider(),
+
         spacing="5",
         direction="column", 
     ),
-
+        ),
     )
 
 """ 

@@ -18,14 +18,17 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 passwordForm(),  
-            )
+            ),
+            margin="2em"
         ),
+        
         rx.center(
             rx.text(
                 MainClass.pwd,
-                size="3"),
+                size="6"),
             ),
-        size="1"
+        
+        size="4",
     )
 
 
