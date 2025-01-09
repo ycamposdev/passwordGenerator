@@ -21,7 +21,7 @@ def passwordForm() -> rx.Component:
                 rx.text("Números: "),
                 rx.checkbox(
                     on_change=MainClass.set_numberChecked,
-                    default_checked=True),
+                    ),
                 ),
         ),
         rx.box(
@@ -29,7 +29,7 @@ def passwordForm() -> rx.Component:
                 rx.text("Caracteres especiales: "),
                 rx.checkbox(
                     on_change=MainClass.set_caracterChecked,
-                    default_checked=True),
+                    ),
             )
         ),
         rx.box(
@@ -37,7 +37,7 @@ def passwordForm() -> rx.Component:
                 rx.text("Letras: "),
                 rx.checkbox(
                     on_change=MainClass.set_lettersChecked,
-                    default_checked=True)
+                    )
             )
         ),
         rx.box(
@@ -45,7 +45,7 @@ def passwordForm() -> rx.Component:
                 rx.text("Mayúsculas: "),
                 rx.checkbox(
                     on_change=MainClass.set_UppercaseLetterChecked,
-                    default_checked=True)
+                    )
             )
         ),
         rx.box(
@@ -62,10 +62,3 @@ def passwordForm() -> rx.Component:
     ),
         ),
     )
-
-""" 
-    rx.center(
-        rx.heading(
-            MainClass.pwd,
-            size="7"),
-    )"""
